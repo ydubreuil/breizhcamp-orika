@@ -5,15 +5,19 @@
           http://dozer.sourceforge.net/schema/beanmapping.xsd">
 
     <mapping>
-        <class-a>bzh.orika.PersonSource</class-a>
-        <class-b>bzh.orika.PersonDest</class-b>
+        <class-a>bzh.orika.sample1.Person</class-a>
+        <class-b>bzh.orika.sample1.RestPerson</class-b>
         <field>
             <a>firstName</a>
-            <b>givenName</b>
+            <b>firstName</b>
         </field>
         <field>
             <a>lastName</a>
-            <b>sirName</b>
+            <b>lastName</b>
+        </field>
+        <field>
+            <a>heightInCm</a>
+            <b>height</b>
         </field>
     </mapping>
 </mappings>

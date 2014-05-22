@@ -51,7 +51,6 @@ URL: https://code.google.com/p/io-2012-slides
       <p>Orange / IT&amp;Labs</p>
       <p>développeur Java / architecte logiciel</p>
       <p>administrateur système Unix / Linux</p>
-      <p>15 ans Linux</p>
     </article>
   </slide>
 
@@ -167,98 +166,25 @@ compile 'ma.glasnost.orika:orika-core:1.4.5'
     </article>
   </slide>
 
-  <slide>
-    <hgroup>
-      <h2>mise en oeuvre</h2>
-      <h3>un mapping très simple</h3>
-    </hgroup>
-    <article class="smaller">
-      <pre class="prettyprint" data-lang="java">
-// Initialisation d'une factory de mapper
-MapperFactory mapperFactory = new DefaultMapperFactory.Builder().build();
 
-// enregistrement d'un mapping
-mapperFactory.classMap(PersonSource.class, PersonDest.class)
-    .field("firstName", "givenName")
-    .field("lastName", "sirName")
-    .byDefault()
-    .register();
-
-// création d'un mapper par la factory configuré précédemment
-MapperFacade mapper = mapperFactory.getMapperFacade();
-
-// Utilisation du mapper
-PersonSource source = new PersonSource();
-source.setFirstName("Yoann");
-source.setLastName("Dubreuil");
-
-// map les champs de 'source' dans une nouvelle instance de type PersonDest
-PersonDest destination = mapper.map(source, PersonDest.class);
-</pre>
-    </article>
-  </slide>
 
   <slide>
     <hgroup>
       <h2>mise en oeuvre</h2>
-      <h3>un mapper très simple</h3>
     </hgroup>
     <article>
-      <pre class="prettyprint" data-lang="java">
-</pre>
-    <ul>
-        <li></li>
-      </ul>
+      <h3>Démo !</h3>
     </article>
   </slide>
 
   <slide>
     <hgroup>
-      <h2>mise en oeuvre</h2>
-      <h3>création d'un mapper</h3>
-    </hgroup>
-    <article>
-      <pre class="prettyprint" data-lang="java">
-</pre>
-      <ul>
-        <li></li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>mise en oeuvre</h2>
-      <h3>création d'un mapper</h3>
-    </hgroup>
-    <article>
-      <pre class="prettyprint" data-lang="java">
-</pre>
-      <ul>
-        <li></li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>sous le capot</h2>
-    </hgroup>
-    <article>
-      <ul>
-        <li>utilisation de javassist</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>inconvénients</h2>
+      <h2>points d'attention</h2>
     </hgroup>
     <article>
       <ul>
         <li>utilise les noms des attributs et méthodes => attention au refactoring</li>
-        <li>tester la couche de mapping peut être verbeux...</li>
+        <li>ne pas oublier de tester les mappings</li>
       </ul>
     </article>
   </slide>
@@ -276,12 +202,6 @@ PersonDest destination = mapper.map(source, PersonDest.class);
     </article>
   </slide>
 
-  <slide class="segue dark quote">
-    <article class="flexbox vleft">
-      <h2>questions ?</h2>
-    </article>
-  </slide>
-
   <slide class="thank-you-slide dark segue nobackground">
     <aside class="gdbar right"><img src="images/breizhcamp-logo.png"></aside>
     <article class="flexbox vleft">
@@ -290,7 +210,6 @@ PersonDest destination = mapper.map(source, PersonDest.class);
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
     </p>
-    <img style="position: absolute; left: 850px; top: 535px;" src="images/obs.jpg">
   </slide>
 
   <slide class="backdrop"></slide>
