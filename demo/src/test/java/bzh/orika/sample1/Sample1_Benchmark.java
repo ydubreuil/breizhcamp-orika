@@ -74,8 +74,8 @@ public class Sample1_Benchmark {
     @GenerateMicroBenchmark
     public RestPerson mapByHand(OrikaState state) {
         RestPerson dest = new RestPerson();
-        dest.setFirstName(new String(state.person.getFirstName()));
-        dest.setLastName(new String(state.person.getLastName()));
+        dest.setFirstName(state.person.getFirstName());
+        dest.setLastName(state.person.getLastName());
         dest.setHeight(Integer.toString(state.person.getHeightInCm()));
         return dest;
     }
@@ -106,9 +106,9 @@ public class Sample1_Benchmark {
 
     /*
 Benchmark                                    Mode   Samples         Mean   Mean error    Units
-b.o.s.Sample1_Benchmark.mapByHand           thrpt         5       19,150        0,930   ops/us
-b.o.s.Sample1_Benchmark.mapWithBeanUtils    thrpt         5        0,020        0,000   ops/us
-b.o.s.Sample1_Benchmark.mapWithDozer        thrpt         5        0,077        0,004   ops/us
-b.o.s.Sample1_Benchmark.mapWithOrika        thrpt         5        2,634        0,027   ops/us
+b.o.s.Sample1_Benchmark.mapByHand           thrpt         5       31,297        0,679   ops/us
+b.o.s.Sample1_Benchmark.mapWithBeanUtils    thrpt         5        0,028        0,001   ops/us
+b.o.s.Sample1_Benchmark.mapWithDozer        thrpt         5        0,115        0,002   ops/us
+b.o.s.Sample1_Benchmark.mapWithOrika        thrpt         5        4,233        0,190   ops/us
      */
 }

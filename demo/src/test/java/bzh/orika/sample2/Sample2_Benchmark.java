@@ -103,4 +103,13 @@ public class Sample2_Benchmark {
 
         new Runner(opt).run();
     }
+
+/*
+
+Benchmark                                Mode   Samples         Mean   Mean error    Units
+b.o.s.Sample2_Benchmark.mapByHand       thrpt         5       29,401        3,637   ops/us
+b.o.s.Sample2_Benchmark.mapWithDozer    thrpt         5        0,086        0,011   ops/us
+b.o.s.Sample2_Benchmark.mapWithOrika    thrpt         5        3,119        0,445   ops/us
+
+*/
 }

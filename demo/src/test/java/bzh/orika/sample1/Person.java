@@ -6,7 +6,7 @@ public class Person {
     int heightInCm;
     int creditCardNumber;
     int yearOfBirth;
-    Salutation salutation;
+//    Salutation salutation;
 
     public String getFirstName() {
         return firstName;
@@ -48,11 +48,11 @@ public class Person {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public Salutation getSalutation() {
-        return salutation;
-    }
-
-    public void setSalutation(Salutation salutation) {
-        this.salutation = salutation;
-    }
+//    public Salutation getSalutation() {
+//        return salutation;
+//    }
+//
+//    public void setSalutation(Salutation salutation) {
+//        this.salutation = salutation;
+//    }
 }
